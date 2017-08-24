@@ -2,9 +2,11 @@ package org.billFarber.charts.dataGenerator;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import freemarker.core.ParseException;
 import freemarker.template.Configuration;
@@ -16,13 +18,15 @@ import freemarker.template.TemplateNotFoundException;
 
 public class FreemarkerClient {
 
+    private static final Logger logger = LoggerFactory.getLogger(FreemarkerClient.class);
+
     private Configuration cfg = new Configuration(Configuration.VERSION_2_3_25);
     private Template template = null;
 
     public FreemarkerClient() throws IOException {
         String resourcesPath = getContextClassLoader().getResource("resources")
                 .getPath() + "";
-        System.out.println("resourcesPath:" + resourcesPath);
+        logger.info("resourcesPath:" + resourcesPath);
         File resourcesFile = new File(resourcesPath);
         cfg.setDirectoryForTemplateLoading(resourcesFile);
         cfg.setDefaultEncoding("UTF-8");

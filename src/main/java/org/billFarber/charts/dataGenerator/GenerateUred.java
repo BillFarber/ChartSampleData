@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.marklogic.client.DatabaseClient;
 import com.marklogic.client.document.XMLDocumentManager;
 import com.marklogic.client.io.DocumentMetadataHandle;
@@ -15,11 +18,13 @@ import freemarker.template.TemplateException;
 
 public class GenerateUred {
 
+    private static final Logger logger = LoggerFactory.getLogger(GenerateUred.class);
+
     private static int NUM_URED_RECORDS_TO_GENERATE = 10;
 
     public static void main(String[] args)
             throws IOException, TemplateException {
-        System.out.println("Begin Test");
+        logger.info("Begin Test");
         DatabaseClient client = MarkLogicClient.getClient();
         FreemarkerClient freemarker = new FreemarkerClient();
 
@@ -42,11 +47,11 @@ public class GenerateUred {
             XMLDocumentManager xmlDocManager = client.newXMLDocumentManager();
 
             xmlDocManager.write(i+".xml", metaHandle, handle);
-            System.out.println("Document written");
+            logger.info("Document written");
         }
 
         client.release();
-        System.out.println("End Test");
+        logger.info("End Test");
     }
 
 }
