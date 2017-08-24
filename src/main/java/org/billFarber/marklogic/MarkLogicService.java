@@ -23,13 +23,13 @@ public class MarkLogicService {
     }
     
     public MarkLogicService(DatabaseClient client) {
-		this.client = client;
-	}
+        this.client = client;
+    }
 
-	public void writeNewUred(String url, String uredDoc) {
+    public void writeNewUred(String url, String uredDoc) {
         StringHandle handle = new StringHandle(uredDoc);
         XMLDocumentManager xmlDocManager = client.newXMLDocumentManager();
         xmlDocManager.write(url, metaHandle, handle);
         logger.info("Document written");
-	}
+    }
 }
