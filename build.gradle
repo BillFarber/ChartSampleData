@@ -12,7 +12,12 @@
 apply plugin: 'java'
 
 task execute(type:JavaExec) {
-    main = "org.billFarber.charts.dataGenerator.Test"
+    main = "org.billFarber.charts.dataGenerator.GenerateUred"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task executeSpecified(type:JavaExec) {
+    main = mainClass
     classpath = sourceSets.main.runtimeClasspath
 }
 
