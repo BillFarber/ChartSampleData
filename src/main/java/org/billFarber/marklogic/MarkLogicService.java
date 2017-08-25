@@ -17,11 +17,11 @@ public class MarkLogicService {
     private static DocumentCollections collections = metaHandle.getCollections();
 
     private DatabaseClient client;
-    
+
     static {
-        collections.add("ured");
+        collections.add("/citation/URED");
     }
-    
+
     public MarkLogicService(DatabaseClient client) {
         this.client = client;
     }

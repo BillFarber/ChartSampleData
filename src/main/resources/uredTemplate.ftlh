@@ -1,9 +1,9 @@
-<mdr:Record xmlns:mdr="http://dtic.mil/mdr">
-    <meta:Metadata xmlns="http://dtic.mil/mdr/meta" xmlns:meta="http://dtic.mil/mdr/meta">
+<mdr:Record xmlns:mdr="http://dtic.mil/mdr/record">
+    <meta:Metadata xmlns="http://dtic.mil/mdr/record/meta" xmlns:meta="http://dtic.mil/mdr/record/meta">
         <meta:DoDFunding>
             <meta:ZipCode>12345</meta:ZipCode>
             <meta:State>${state}</meta:State>
-            <meta:FundingAmount>${amount}</meta:FundingAmount>
+            <meta:TotalDODFunding>${amount}</meta:TotalDODFunding>
         </meta:DoDFunding>
     </meta:Metadata>
 </mdr:Record>
