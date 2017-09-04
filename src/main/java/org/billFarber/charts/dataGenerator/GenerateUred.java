@@ -15,6 +15,7 @@ public class GenerateUred {
 
     private static final Logger logger = LoggerFactory.getLogger(GenerateUred.class);
     private static int NUM_URED_RECORDS_TO_GENERATE = 1000;
+    private static String BASE_URED_URI = "/citation/URED/";
 
     public static void main(String[] args) throws Exception {
         logger.info("Begin Test");
@@ -25,15 +26,17 @@ public class GenerateUred {
         for (int i = 0; i < NUM_URED_RECORDS_TO_GENERATE; i++) {
             Map<String, Object> root = new HashMap<>();
             int randomStateNum = ThreadLocalRandom.current().nextInt(0, 49 + 1);
-            int randomAmount = ThreadLocalRandom.current().nextInt(0, 999999999);
+            int randomAmount = ThreadLocalRandom.current().nextInt(0, 9999999);
+            int randomOrganization = ThreadLocalRandom.current().nextInt(0, 3);
 
             root.put("state", State.values()[randomStateNum].abbreviation());
             root.put("amount", "" + randomAmount);
+            root.put("organizationName", "" + Organization.values()[randomOrganization].name());
 
             freemarker.loadTemplate("uredTemplate.ftlh");
             String newURED = freemarker.process(root);
             logger.debug("new URED document: \n" + newURED);
-            mlService.writeNewUred(i + ".xml", newURED);
+            mlService.writeNewUred(BASE_URED_URI+i + ".xml", newURED);
         }
 
         client.release();
