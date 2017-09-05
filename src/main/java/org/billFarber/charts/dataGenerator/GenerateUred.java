@@ -27,7 +27,7 @@ public class GenerateUred {
             Map<String, Object> root = new HashMap<>();
             int randomStateNum = ThreadLocalRandom.current().nextInt(0, 49 + 1);
             int randomAmount = ThreadLocalRandom.current().nextInt(0, 9999999);
-            int randomOrganization = ThreadLocalRandom.current().nextInt(0, 3);
+            int randomOrganization = ThreadLocalRandom.current().nextInt(0, 5);
 
             root.put("state", State.values()[randomStateNum].abbreviation());
             root.put("amount", "" + randomAmount);

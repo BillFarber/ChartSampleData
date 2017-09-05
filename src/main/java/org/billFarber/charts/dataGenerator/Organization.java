@@ -2,6 +2,8 @@ package org.billFarber.charts.dataGenerator;
 
 public enum Organization {
     Acme("AC"),
+    Boeing("B"),
+    Carnitas("CA"),
     DefenseIndustrialComplex("DI"),
     IAC("IAC");
 
