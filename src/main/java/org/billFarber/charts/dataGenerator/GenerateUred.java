@@ -14,7 +14,7 @@ import com.marklogic.client.DatabaseClient;
 public class GenerateUred {
 
     private static final Logger logger = LoggerFactory.getLogger(GenerateUred.class);
-    private static int NUM_URED_RECORDS_TO_GENERATE = 1000;
+    private static int NUM_URED_RECORDS_TO_GENERATE = 100000;
     private static String BASE_URED_URI = "/citation/URED/";
 
     public static void main(String[] args) throws Exception {
