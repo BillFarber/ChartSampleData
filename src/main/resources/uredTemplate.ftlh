@@ -53,7 +53,7 @@
         <meta:CreatedBy>LEWISA4514</meta:CreatedBy>
         <meta:CreateDate>2011-10-20</meta:CreateDate>
         <meta:DODFundSourceID>32563</meta:DODFundSourceID>
-        <meta:ProgramElement>PE00000</meta:ProgramElement>
+        <meta:ProgramElement>${programElementNumber}</meta:ProgramElement>
         <meta:ProjectNumber>
           <meta:Punctuated>PR0000</meta:Punctuated>
           <meta:Unpunctuated>PR0000</meta:Unpunctuated>

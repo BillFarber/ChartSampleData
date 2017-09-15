@@ -1,4 +1,4 @@
-package org.billFarber.charts.dataGenerator;
+package org.billFarber.charts.dataGenerator.sampleValues;
 
 public enum Organization {
     Acme("AC"),

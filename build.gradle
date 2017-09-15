@@ -11,8 +11,13 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
-task execute(type:JavaExec) {
+task generateURED(type:JavaExec) {
     main = "org.billFarber.charts.dataGenerator.GenerateUred"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task generateR2(type:JavaExec) {
+    main = "org.billFarber.charts.dataGenerator.GenerateR2"
     classpath = sourceSets.main.runtimeClasspath
 }
 

@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
+import org.billFarber.charts.dataGenerator.sampleValues.Organization;
+import org.billFarber.charts.dataGenerator.sampleValues.ProgramElement;
+import org.billFarber.charts.dataGenerator.sampleValues.State;
 import org.billFarber.marklogic.MarkLogicClientFactory;
 import org.billFarber.marklogic.MarkLogicService;
 import org.slf4j.Logger;
@@ -14,7 +17,7 @@ import com.marklogic.client.DatabaseClient;
 public class GenerateUred {
 
     private static final Logger logger = LoggerFactory.getLogger(GenerateUred.class);
-    private static int NUM_URED_RECORDS_TO_GENERATE = 100000;
+    private static int NUM_URED_RECORDS_TO_GENERATE = 10;
     private static String BASE_URED_URI = "/citation/URED/";
 
     public static void main(String[] args) throws Exception {
@@ -28,7 +31,9 @@ public class GenerateUred {
             int randomStateNum = ThreadLocalRandom.current().nextInt(0, 49 + 1);
             int randomAmount = ThreadLocalRandom.current().nextInt(0, 9999999);
             int randomOrganization = ThreadLocalRandom.current().nextInt(0, 5);
+            int randomPE = ThreadLocalRandom.current().nextInt(0, 10);
 
+            root.put("programElementNumber", ProgramElement.values()[randomPE].name());
             root.put("state", State.values()[randomStateNum].abbreviation());
             root.put("amount", "" + randomAmount);
             root.put("organizationName", "" + Organization.values()[randomOrganization].name());
