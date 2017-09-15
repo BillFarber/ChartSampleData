@@ -33,15 +33,18 @@ public class GenerateUred {
             int randomOrganization = ThreadLocalRandom.current().nextInt(0, 5);
             int randomPE = ThreadLocalRandom.current().nextInt(0, 10);
 
+            String accessionNumber = "EF" + String.format ("%06d", i);
             root.put("programElementNumber", ProgramElement.values()[randomPE].name());
             root.put("state", State.values()[randomStateNum].abbreviation());
             root.put("amount", "" + randomAmount);
             root.put("organizationName", "" + Organization.values()[randomOrganization].name());
+            root.put("accessionNumber", accessionNumber);
 
             freemarker.loadTemplate("uredTemplate.ftlh");
             String newURED = freemarker.process(root);
             logger.debug("new URED document: \n" + newURED);
-            mlService.writeNewUred(BASE_URED_URI+i + ".xml", newURED);
+
+            mlService.writeNewUred(BASE_URED_URI+accessionNumber + ".xml", newURED);
         }
 
         client.release();

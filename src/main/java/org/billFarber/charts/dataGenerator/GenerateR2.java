@@ -28,12 +28,14 @@ public class GenerateR2 {
             Map<String, Object> root = new HashMap<>();
             int randomPE = ThreadLocalRandom.current().nextInt(0, 10);
 
+            String accessionNumber = "AA" + String.format ("%06d", i);
             root.put("programElementNumber", ProgramElement.values()[randomPE].name());
+            root.put("accessionNumber", accessionNumber);
 
             freemarker.loadTemplate("r2Template.ftlh");
             String newR2 = freemarker.process(root);
             logger.debug("new R2 document: \n" + newR2);
-            mlService.writeNewUred(BASE_R2_URI+i + ".xml", newR2);
+            mlService.writeNewUred(BASE_R2_URI+ accessionNumber + ".xml", newR2);
         }
 
         client.release();

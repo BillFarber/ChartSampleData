@@ -1,6 +1,6 @@
 <mdr:Record Type="R2" xmlns:mdr="http://dtic.mil/mdr/record">
     <meta:Metadata xmlns:meta="http://dtic.mil/mdr/record/meta">
-        <meta:AccessionNumber>AA000000</meta:AccessionNumber>
+        <meta:AccessionNumber>${accessionNumber}</meta:AccessionNumber>
         <meta:CitationClassification>
             <meta:Code>U</meta:Code>
             <meta:Description>Unclassified</meta:Description>

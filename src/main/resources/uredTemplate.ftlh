@@ -1,6 +1,6 @@
 <mdr:Record Type="URED" xmlns:mdr="http://dtic.mil/mdr/record">
   <meta:Metadata xmlns:meta="http://dtic.mil/mdr/record/meta">
-    <meta:AccessionNumber>EF000000</meta:AccessionNumber>
+    <meta:AccessionNumber>${accessionNumber}</meta:AccessionNumber>
     <meta:ActiveFlag>Y</meta:ActiveFlag>
     <meta:Approach>Sample data for visualizations</meta:Approach>
     <meta:CitationCreationDate>2011-10-20</meta:CitationCreationDate>
