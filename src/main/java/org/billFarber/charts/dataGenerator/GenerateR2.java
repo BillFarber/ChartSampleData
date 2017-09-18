@@ -35,7 +35,7 @@ public class GenerateR2 {
             freemarker.loadTemplate("r2Template.ftlh");
             String newR2 = freemarker.process(root);
             logger.debug("new R2 document: \n" + newR2);
-            mlService.writeNewUred(BASE_R2_URI+ accessionNumber + ".xml", newR2);
+            mlService.writeNewRTwo(BASE_R2_URI+ accessionNumber + ".xml", newR2);
         }
 
         client.release();

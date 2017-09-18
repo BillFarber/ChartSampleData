@@ -13,13 +13,17 @@ public class MarkLogicService {
 
     private static final Logger logger = LoggerFactory.getLogger(MarkLogicService.class);
 
-    private static DocumentMetadataHandle metaHandle = new DocumentMetadataHandle();
-    private static DocumentCollections collections = metaHandle.getCollections();
+    private static DocumentMetadataHandle uredMetaHandle = new DocumentMetadataHandle();
+    private static DocumentCollections uredCollections = uredMetaHandle.getCollections();
+
+    private static DocumentMetadataHandle rTwoMetaHandle = new DocumentMetadataHandle();
+    private static DocumentCollections rTwoCollections = rTwoMetaHandle.getCollections();
 
     private DatabaseClient client;
 
     static {
-        collections.add("/citation/URED");
+        uredCollections.add("/citation/URED");
+        rTwoCollections.add("/citation/R2");
     }
 
     public MarkLogicService(DatabaseClient client) {
@@ -29,7 +33,14 @@ public class MarkLogicService {
     public void writeNewUred(String url, String uredDoc) {
         StringHandle handle = new StringHandle(uredDoc);
         XMLDocumentManager xmlDocManager = client.newXMLDocumentManager();
-        xmlDocManager.write(url, metaHandle, handle);
+        xmlDocManager.write(url, uredMetaHandle, handle);
+        logger.info("Document written");
+    }
+
+    public void writeNewRTwo(String url, String rTwoDoc) {
+        StringHandle handle = new StringHandle(rTwoDoc);
+        XMLDocumentManager xmlDocManager = client.newXMLDocumentManager();
+        xmlDocManager.write(url, rTwoMetaHandle, handle);
         logger.info("Document written");
     }
 }
