@@ -2,8 +2,8 @@
   <tr:Raw xmlns:tr="http://dtic.mil/mdr/record/tr">
     <tr:TrFix>
       <tr:UnclassifiedTitle>BW Detection in the Subway System: Past Studies and Recommendations for the Future</tr:UnclassifiedTitle>
-      <tr:TitleClassificationCode>U</tr:TitleClassificationCode>
-      <tr:AccessionNumber>C066830</tr:AccessionNumber>
+      <tr:TitleClassificationCode>Z</tr:TitleClassificationCode>
+      <tr:AccessionNumber>ADC066830</tr:AccessionNumber>
       <tr:CorporateAuthor>EDGEWOOD CHEMICAL BIOLOGICAL CENTER ABERDEEN PROVING GROUND MD</tr:CorporateAuthor>
       <tr:SourceCode>436125</tr:SourceCode>
       <tr:GeoPoliticalCode>2402</tr:GeoPoliticalCode>
@@ -25,7 +25,7 @@
       <tr:InitialInventory>0002</tr:InitialInventory>
       <tr:DistributionStatement>Distribution authorized to U.S. Gov't. agencies and their contractors; Administrative/Operational Use; Apr 2001. Other requests shall be referred to Director, Edgewood Chemical Biological Ctr., ATTN: AMSSB-RRT-OM, Aberdeen Proving Ground, MD 21010-5424.</tr:DistributionStatement>
       <tr:CitationClassificationCode>U</tr:CitationClassificationCode>
-      <tr:ReportClassificationCode>U</tr:ReportClassificationCode>
+      <tr:ReportClassificationCode>Z</tr:ReportClassificationCode>
     </tr:TrFix>
     <tr:TrDistCode>
       <tr:Code>2</tr:Code>
@@ -83,6 +83,11 @@
     </meta:OrganizationType>
     <meta:ReportDateText>20010400</meta:ReportDateText>
     <meta:ReportDate>2001-04-01</meta:ReportDate>
+    <meta:Abstract>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</meta:Abstract>
+    <meta:AbstractClassification>
+      <meta:Code>U</meta:Code>
+      <meta:Description>Unclassified</meta:Description>
+    </meta:AbstractClassification>
     <meta:DescriptiveNote>Final rept. Apr-Aug 2000</meta:DescriptiveNote>
     <meta:SupplementaryNotes>--Original contains color plates: All DTIC reproductions will be in black and white.</meta:SupplementaryNotes>
     <meta:PaginationOrMediaCount>0023</meta:PaginationOrMediaCount>
@@ -110,6 +115,12 @@
   <meta:Punctuated>DOE</meta:Punctuated>
       </meta:MonitorSeries1>
     </meta:MonitorSeries>
+    <meta:ContractNumbers>
+      <meta:ContractNumber1>
+        <meta:Unpunctuated>DA44009eng4830</meta:Unpunctuated>
+        <meta:Punctuated>${contractNumber}</meta:Punctuated>
+      </meta:ContractNumber1>
+    </meta:ContractNumbers>
     <meta:TabIssueYear>2002</meta:TabIssueYear>
     <meta:TabIssueNumber>02</meta:TabIssueNumber>
     <meta:Descriptors>
@@ -139,12 +150,12 @@
     </meta:IdentifierClassification>
     <meta:FieldsAndGroups>
       <meta:FieldAndGroup Num="1">
-  <meta:Code>150603</meta:Code>
-  <meta:Description>Chemical, Biological and Radiological Warfare</meta:Description>
+        <meta:Code>150603</meta:Code>
+        <meta:Description>Chemical, Biological and Radiological Warfare</meta:Description>
       </meta:FieldAndGroup>
       <meta:FieldAndGroup Num="2">
-  <meta:Code>150607</meta:Code>
-  <meta:Description>Unconventional Warfare</meta:Description>
+        <meta:Code>150607</meta:Code>
+        <meta:Description>Unconventional Warfare</meta:Description>
       </meta:FieldAndGroup>
     </meta:FieldsAndGroups>
     <meta:ClassificationAuthority>DERIVED</meta:ClassificationAuthority>
@@ -161,15 +172,15 @@
     <meta:InitialInventory>0002</meta:InitialInventory>
     <meta:Distributions>
       <meta:Distribution1>
-  <meta:LookupCode>02</meta:LookupCode>
-  <meta:Code>C - 02</meta:Code>
-  <meta:Description>U.S. GOVT. AND U.S. GOVT. CONTRACTORS ONLY</meta:Description>
+        <meta:LookupCode>02</meta:LookupCode>
+        <meta:Code>C - 02</meta:Code>
+        <meta:Description>U.S. GOVT. AND U.S. GOVT. CONTRACTORS ONLY</meta:Description>
       </meta:Distribution1>
       <meta:Distribution2>
-  <meta:LookupCode>00</meta:LookupCode>
+        <meta:LookupCode>00</meta:LookupCode>
       </meta:Distribution2>
       <meta:Distribution3>
-  <meta:LookupCode>00</meta:LookupCode>
+        <meta:LookupCode>00</meta:LookupCode>
       </meta:Distribution3>
     </meta:Distributions>
     <meta:DistributionStatement>Distribution authorized to U.S. Gov't. agencies and their contractors; Administrative/Operational Use; Apr 2001. Other requests shall be referred to Director, Edgewood Chemical Biological Ctr., ATTN: AMSSB-RRT-OM, Aberdeen Proving Ground, MD 21010-5424.</meta:DistributionStatement>
@@ -194,3 +205,4 @@
     <mdr:FullTextIndexed>0</mdr:FullTextIndexed>
   </mdr:PDF>
 </mdr:Record>
+
