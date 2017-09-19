@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
+import org.billFarber.charts.dataGenerator.sampleValues.ContractNumber;
 import org.billFarber.charts.dataGenerator.sampleValues.Organization;
 import org.billFarber.charts.dataGenerator.sampleValues.ProgramElement;
 import org.billFarber.charts.dataGenerator.sampleValues.State;
@@ -32,6 +33,7 @@ public class GenerateUred {
             int randomAmount = ThreadLocalRandom.current().nextInt(0, 9999999);
             int randomOrganization = ThreadLocalRandom.current().nextInt(0, 5);
             int randomPE = ThreadLocalRandom.current().nextInt(0, 10);
+            int randomContractNumber = ThreadLocalRandom.current().nextInt(0, 10);
 
             String accessionNumber = "EF" + String.format ("%06d", i);
             root.put("programElementNumber", ProgramElement.values()[randomPE].name());
@@ -39,6 +41,7 @@ public class GenerateUred {
             root.put("amount", "" + randomAmount);
             root.put("organizationName", "" + Organization.values()[randomOrganization].name());
             root.put("accessionNumber", accessionNumber);
+            root.put("contractNumber", ContractNumber.values()[randomContractNumber].name());
 
             freemarker.loadTemplate("uredTemplate.ftlh");
             String newURED = freemarker.process(root);

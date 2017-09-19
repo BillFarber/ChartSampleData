@@ -48,7 +48,7 @@
         <meta:CongressionalAdd>N</meta:CongressionalAdd>
         <meta:ContractNumber>
           <meta:Punctuated>CN00000</meta:Punctuated>
-          <meta:Unpunctuated>CN00000</meta:Unpunctuated>
+          <meta:Unpunctuated>${contractNumber}</meta:Unpunctuated>
         </meta:ContractNumber>
         <meta:CreatedBy>LEWISA4514</meta:CreatedBy>
         <meta:CreateDate>2011-10-20</meta:CreateDate>
