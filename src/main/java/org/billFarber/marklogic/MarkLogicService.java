@@ -19,11 +19,15 @@ public class MarkLogicService {
     private static DocumentMetadataHandle rTwoMetaHandle = new DocumentMetadataHandle();
     private static DocumentCollections rTwoCollections = rTwoMetaHandle.getCollections();
 
+    private static DocumentMetadataHandle trMetaHandle = new DocumentMetadataHandle();
+    private static DocumentCollections trCollections = trMetaHandle.getCollections();
+
     private DatabaseClient client;
 
     static {
         uredCollections.add("/citation/URED");
         rTwoCollections.add("/citation/R2");
+        trCollections.add("/citation/TR");
     }
 
     public MarkLogicService(DatabaseClient client) {
@@ -41,6 +45,13 @@ public class MarkLogicService {
         StringHandle handle = new StringHandle(rTwoDoc);
         XMLDocumentManager xmlDocManager = client.newXMLDocumentManager();
         xmlDocManager.write(url, rTwoMetaHandle, handle);
+        logger.info("Document written");
+    }
+
+    public void writeNewTr(String url, String trDoc) {
+        StringHandle handle = new StringHandle(trDoc);
+        XMLDocumentManager xmlDocManager = client.newXMLDocumentManager();
+        xmlDocManager.write(url, trMetaHandle, handle);
         logger.info("Document written");
     }
 }

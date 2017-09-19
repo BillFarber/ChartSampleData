@@ -3,7 +3,7 @@
     <tr:TrFix>
       <tr:UnclassifiedTitle>BW Detection in the Subway System: Past Studies and Recommendations for the Future</tr:UnclassifiedTitle>
       <tr:TitleClassificationCode>Z</tr:TitleClassificationCode>
-      <tr:AccessionNumber>ADC066830</tr:AccessionNumber>
+      <tr:AccessionNumber>${contractNumber}</tr:AccessionNumber>
       <tr:CorporateAuthor>EDGEWOOD CHEMICAL BIOLOGICAL CENTER ABERDEEN PROVING GROUND MD</tr:CorporateAuthor>
       <tr:SourceCode>436125</tr:SourceCode>
       <tr:GeoPoliticalCode>2402</tr:GeoPoliticalCode>
