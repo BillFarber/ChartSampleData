@@ -59,5 +59,18 @@
             <r2:ProgramElementTitle>Test</r2:ProgramElementTitle>
             <r2:ServiceAgencyName>Army</r2:ServiceAgencyName>
         </r2:ProgramElement>
+<#if useProgramElementNumber2>
+        <r2:ProgramElement classification="UNCLASSIFIED" monetaryUnit="Millions">
+            <r2:AppropriationCode>1</r2:AppropriationCode>
+            <r2:AppropriationName>2</r2:AppropriationName>
+            <r2:BudgetActivityNumber>3</r2:BudgetActivityNumber>
+            <r2:BudgetActivityTitle>4</r2:BudgetActivityTitle>
+            <r2:BudgetCycle>5</r2:BudgetCycle>
+            <r2:BudgetYear>17</r2:BudgetYear>
+            <r2:ProgramElementNumber>${programElementNumber2}</r2:ProgramElementNumber>
+            <r2:ProgramElementTitle>Test</r2:ProgramElementTitle>
+            <r2:ServiceAgencyName>Army</r2:ServiceAgencyName>
+        </r2:ProgramElement>
+</#if>
     </r2:ProgramElementList>
 </mdr:Record>
