@@ -15,7 +15,7 @@ import com.marklogic.client.DatabaseClient;
 public class GenerateTr {
 
     private static final Logger logger = LoggerFactory.getLogger(GenerateTr.class);
-    private static int NUM_TR_RECORDS_TO_GENERATE = 10;
+    private static int NUM_TR_RECORDS_TO_GENERATE = 50;
     private static String BASE_TR_URI = "/citation/TR/";
 
     public static void main(String[] args) throws Exception {

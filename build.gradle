@@ -21,6 +21,11 @@ task generateR2(type:JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+task generateTR(type:JavaExec) {
+    main = "org.billFarber.charts.dataGenerator.GenerateTr"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
 task executeSpecified(type:JavaExec) {
     main = mainClass
     classpath = sourceSets.main.runtimeClasspath
