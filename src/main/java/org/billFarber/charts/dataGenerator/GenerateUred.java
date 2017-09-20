@@ -34,6 +34,7 @@ public class GenerateUred {
             int randomOrganization = ThreadLocalRandom.current().nextInt(0, 5);
             int randomPE = ThreadLocalRandom.current().nextInt(0, 10);
             int randomContractNumber = ThreadLocalRandom.current().nextInt(0, 10);
+            int randomContractNumber2 = ThreadLocalRandom.current().nextInt(0, 10);
 
             String accessionNumber = "EF" + String.format ("%06d", i);
             root.put("programElementNumber", ProgramElement.values()[randomPE].name());
@@ -42,6 +43,12 @@ public class GenerateUred {
             root.put("organizationName", "" + Organization.values()[randomOrganization].name());
             root.put("accessionNumber", accessionNumber);
             root.put("contractNumber", ContractNumber.values()[randomContractNumber].name());
+            root.put("contractNumber2", ContractNumber.values()[randomContractNumber2].name());
+            if (randomContractNumber2 % 4 == 0) {
+                root.put("useContractNumber2", true);
+            } else {
+                root.put("useContractNumber2", false);
+            }
 
             freemarker.loadTemplate("uredTemplate.ftlh");
             String newURED = freemarker.process(root);

@@ -3,7 +3,7 @@
     <tr:TrFix>
       <tr:UnclassifiedTitle>BW Detection in the Subway System: Past Studies and Recommendations for the Future</tr:UnclassifiedTitle>
       <tr:TitleClassificationCode>Z</tr:TitleClassificationCode>
-      <tr:AccessionNumber>${contractNumber}</tr:AccessionNumber>
+      <tr:AccessionNumber>ADC066830</tr:AccessionNumber>
       <tr:CorporateAuthor>EDGEWOOD CHEMICAL BIOLOGICAL CENTER ABERDEEN PROVING GROUND MD</tr:CorporateAuthor>
       <tr:SourceCode>436125</tr:SourceCode>
       <tr:GeoPoliticalCode>2402</tr:GeoPoliticalCode>
@@ -70,7 +70,7 @@
       <meta:Code>U</meta:Code>
       <meta:Description>Unclassified</meta:Description>
     </meta:TitleClassification>
-    <meta:AccessionNumber>ADC066830</meta:AccessionNumber>
+    <meta:AccessionNumber>${accessionNumber}</meta:AccessionNumber>
     <meta:PersonalAuthors>
       <meta:PersonalAuthor Num="1">Birenzvige, Amnon</meta:PersonalAuthor>
     </meta:PersonalAuthors>
@@ -120,6 +120,12 @@
         <meta:Unpunctuated>DA44009eng4830</meta:Unpunctuated>
         <meta:Punctuated>${contractNumber}</meta:Punctuated>
       </meta:ContractNumber1>
+<#if useContractNumber2>
+      <meta:ContractNumber2>
+        <meta:Unpunctuated>DA44009eng4830</meta:Unpunctuated>
+        <meta:Punctuated>${contractNumber2}</meta:Punctuated>
+      </meta:ContractNumber2>
+</#if>
     </meta:ContractNumbers>
     <meta:TabIssueYear>2002</meta:TabIssueYear>
     <meta:TabIssueNumber>02</meta:TabIssueNumber>

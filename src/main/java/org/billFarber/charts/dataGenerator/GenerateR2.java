@@ -30,14 +30,14 @@ public class GenerateR2 {
             int randomPE2 = ThreadLocalRandom.current().nextInt(0, 10);
 
             String accessionNumber = "AA" + String.format ("%06d", i);
+            root.put("accessionNumber", accessionNumber);
             root.put("programElementNumber", ProgramElement.values()[randomPE].name());
             root.put("programElementNumber2", ProgramElement.values()[randomPE2].name());
-            if (randomPE2 % 2 == 0) {
+            if (randomPE2 % 4 == 0) {
                 root.put("useProgramElementNumber2", true);
             } else {
                 root.put("useProgramElementNumber2", false);
             }
-            root.put("accessionNumber", accessionNumber);
 
             freemarker.loadTemplate("r2Template.ftlh");
             String newR2 = freemarker.process(root);

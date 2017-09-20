@@ -10,5 +10,15 @@ public enum ProgramElement {
     PE00006,
     PE00007,
     PE00008,
-    PE00009;
+    PE00009,
+    PE00010,
+    PE00011,
+    PE00012,
+    PE00013,
+    PE00014,
+    PE00015,
+    PE00016,
+    PE00017,
+    PE00018,
+    PE00019;
 }

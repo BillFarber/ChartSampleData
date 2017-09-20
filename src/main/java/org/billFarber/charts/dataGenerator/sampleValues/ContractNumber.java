@@ -10,5 +10,15 @@ public enum ContractNumber {
     CN00006,
     CN00007,
     CN00008,
-    CN00009;
+    CN00009,
+    CT00000,
+    CT00001,
+    CT00002,
+    CT00003,
+    CT00004,
+    CT00005,
+    CT00006,
+    CT00007,
+    CT00008,
+    CT00009;
 }

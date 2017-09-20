@@ -47,9 +47,15 @@
         </meta:BudgetActivityCode>
         <meta:CongressionalAdd>N</meta:CongressionalAdd>
         <meta:ContractNumber>
-          <meta:Punctuated>CN00000</meta:Punctuated>
-          <meta:Unpunctuated>${contractNumber}</meta:Unpunctuated>
+          <meta:Punctuated>${contractNumber}</meta:Punctuated>
+          <meta:Unpunctuated>CNxxxxx</meta:Unpunctuated>
         </meta:ContractNumber>
+<#if useContractNumber2>
+      <meta:ContractNumber>
+        <meta:Punctuated>${contractNumber2}</meta:Punctuated>
+        <meta:Unpunctuated>CNxxxxx</meta:Unpunctuated>
+      </meta:ContractNumber>
+</#if>
         <meta:CreatedBy>LEWISA4514</meta:CreatedBy>
         <meta:CreateDate>2011-10-20</meta:CreateDate>
         <meta:DODFundSourceID>32563</meta:DODFundSourceID>

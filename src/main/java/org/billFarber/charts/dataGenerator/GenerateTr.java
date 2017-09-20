@@ -27,10 +27,17 @@ public class GenerateTr {
         for (int i = 0; i < NUM_TR_RECORDS_TO_GENERATE; i++) {
             Map<String, Object> root = new HashMap<>();
             int randomContractNumber = ThreadLocalRandom.current().nextInt(0, 10);
+            int randomContractNumber2 = ThreadLocalRandom.current().nextInt(0, 10);
 
             String accessionNumber = "AD" + String.format ("%06d", i);
             root.put("accessionNumber", accessionNumber);
             root.put("contractNumber", ContractNumber.values()[randomContractNumber].name());
+            root.put("contractNumber2", ContractNumber.values()[randomContractNumber2].name());
+            if (randomContractNumber2 % 4 == 0) {
+                root.put("useContractNumber2", true);
+            } else {
+                root.put("useContractNumber2", false);
+            }
 
             freemarker.loadTemplate("trTemplate.ftlh");
             String newTr = freemarker.process(root);
