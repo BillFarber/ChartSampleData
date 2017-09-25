@@ -3,7 +3,9 @@
     <meta:AccessionNumber>${accessionNumber}</meta:AccessionNumber>
     <meta:ActiveFlag>Y</meta:ActiveFlag>
     <meta:Approach>Sample data for visualizations</meta:Approach>
-    <meta:CitationCreationDate>2011-10-20</meta:CitationCreationDate>
+    <meta:CitationCreationDate>
+        <meta:Date>2011-10-20</meta:Date>
+    </meta:CitationCreationDate>
     <meta:CompletedDate>2011-10-20</meta:CompletedDate>
     <meta:CompletedFlag>Y</meta:CompletedFlag>
     <meta:CreatedBy>BARBER</meta:CreatedBy>
