@@ -15,7 +15,7 @@ import com.marklogic.client.DatabaseClient;
 public class GenerateR2 {
 
     private static final Logger logger = LoggerFactory.getLogger(GenerateR2.class);
-    private static int NUM_R2_RECORDS_TO_GENERATE = 50;
+    private static int NUM_R2_RECORDS_TO_GENERATE = 100;
     private static String BASE_R2_URI = "/citation/R2/";
 
     public static void main(String[] args) throws Exception {
