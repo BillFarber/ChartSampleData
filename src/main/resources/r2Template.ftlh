@@ -39,6 +39,7 @@
             <meta:Description>Unclassified</meta:Description>
         </meta:ReportClassification>
         <meta:ServiceAgencyAcronym>ARMY</meta:ServiceAgencyAcronym>
+        <meta:FundingAmount>${fundingAmount}</meta:FundingAmount>
     </meta:Metadata>
     <mdr:PDF>
         <mdr:FullText></mdr:FullText>
@@ -54,7 +55,7 @@
             <r2:BudgetActivityNumber>3</r2:BudgetActivityNumber>
             <r2:BudgetActivityTitle>4</r2:BudgetActivityTitle>
             <r2:BudgetCycle>5</r2:BudgetCycle>
-            <r2:BudgetYear>17</r2:BudgetYear>
+            <r2:BudgetYear>${programElementBudgetYear}</r2:BudgetYear>
             <r2:ProgramElementNumber>${programElementNumber}</r2:ProgramElementNumber>
             <r2:ProgramElementTitle>Test</r2:ProgramElementTitle>
             <r2:ServiceAgencyName>Army</r2:ServiceAgencyName>
