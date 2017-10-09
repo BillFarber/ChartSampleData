@@ -27,8 +27,8 @@ public class GenerateR2 {
 
         for (int i = 0; i < NUM_R2_RECORDS_TO_GENERATE; i++) {
             Map<String, Object> root = new HashMap<>();
-            int randomPE = ThreadLocalRandom.current().nextInt(0, 10);
-            int randomPE2 = ThreadLocalRandom.current().nextInt(0, 10);
+            int randomPE = ThreadLocalRandom.current().nextInt(0, 40);
+            int randomPE2 = ThreadLocalRandom.current().nextInt(0, 40);
 
             String accessionNumber = "AA" + String.format ("%06d", i);
             root.put("accessionNumber", accessionNumber);
