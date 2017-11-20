@@ -59,6 +59,16 @@
             <r2:ProgramElementNumber>${programElementNumber}</r2:ProgramElementNumber>
             <r2:ProgramElementTitle>Test</r2:ProgramElementTitle>
             <r2:ServiceAgencyName>Army</r2:ServiceAgencyName>
+            <r2:ProgramElementFunding>
+                <r2:PriorYear>209.578</r2:PriorYear>
+                <r2:CurrentYear>218.209</r2:CurrentYear>
+                <r2:BudgetYearOne>305.484</r2:BudgetYearOne>
+                <r2:BudgetYearOneBase>305.484</r2:BudgetYearOneBase>
+                <r2:BudgetYearTwo>340.564</r2:BudgetYearTwo>
+                <r2:BudgetYearThree>339.388</r2:BudgetYearThree>
+                <r2:BudgetYearFour>344.594</r2:BudgetYearFour>
+                <r2:BudgetYearFive>356.710</r2:BudgetYearFive>
+            </r2:ProgramElementFunding>
         </r2:ProgramElement>
 <#if useProgramElementNumber2>
         <r2:ProgramElement classification="UNCLASSIFIED" monetaryUnit="Millions">
@@ -71,6 +81,16 @@
             <r2:ProgramElementNumber>${programElementNumber2}</r2:ProgramElementNumber>
             <r2:ProgramElementTitle>Test</r2:ProgramElementTitle>
             <r2:ServiceAgencyName>Army</r2:ServiceAgencyName>
+            <r2:ProgramElementFunding>
+                <r2:PriorYear>209.578</r2:PriorYear>
+                <r2:CurrentYear>218.209</r2:CurrentYear>
+                <r2:BudgetYearOne>305.484</r2:BudgetYearOne>
+                <r2:BudgetYearOneBase>305.484</r2:BudgetYearOneBase>
+                <r2:BudgetYearTwo>340.564</r2:BudgetYearTwo>
+                <r2:BudgetYearThree>339.388</r2:BudgetYearThree>
+                <r2:BudgetYearFour>344.594</r2:BudgetYearFour>
+                <r2:BudgetYearFive>356.710</r2:BudgetYearFive>
+            </r2:ProgramElementFunding>
         </r2:ProgramElement>
 </#if>
     </r2:ProgramElementList>
